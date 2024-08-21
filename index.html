@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dESLA's Project</title>
+</head>
+<body>
+    <h1>dESLA's Project</h1>
+    <img id="video" src="/video_feed" style="width: 100%; max-width: 600px;" />
+    <script>
+        const video = document.getElementById('video');
+
+        function updateImage() {
+            video.src = `/video_feed?timestamp=${new Date().getTime()}`;
+        }
+
+        setInterval(updateImage, 100); 
+    </script>
+</body>
+</html>
